@@ -1,4 +1,9 @@
-__pycache__/
 *.py[cod]
+*.pyc
+.DS_Storenode_modules/
+.env
+.env.*
 .pytest_cache/
-.DS_Store
+.venv/
+__pycache__/
+dist/*.tmp
