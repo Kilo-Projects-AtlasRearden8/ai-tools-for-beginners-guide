@@ -68,7 +68,7 @@ Never keep actual passwords in a file on your computer or phone unless it is a p
 
 ## What comes next
 
-Once you are comfortable with one tool, try another. Each page in this manual walks you through one kind of tool. When you are ready, read the [safety and privacy basics](safety-privacy.md) before you explore further.
+Once you are comfortable with one tool, try another. Each page in this manual walks you through one kind of tool. When you are ready, read the [safety and privacy basics](safety-privacy.html) before you explore further.
 
 ---
-© 2026 Asdale Dynamics, LLC. Printable cheat sheet: docs/cheat-sheets/setup.md
+© 2026 Asdale Dynamics, LLC. Printable cheat sheet: site/cheat-sheets/setup.html

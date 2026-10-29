@@ -55,4 +55,4 @@ Copy and paste one of these into a writing assistant:
 - "Write a back-cover blurb for a cozy mystery novel set in a small Indiana town."
 
 ---
-© 2026 Asdale Dynamics, LLC. Printable cheat sheet: docs/cheat-sheets/writing-assistants.md
+© 2026 Asdale Dynamics, LLC. Printable cheat sheet: site/cheat-sheets/writing-assistants.html

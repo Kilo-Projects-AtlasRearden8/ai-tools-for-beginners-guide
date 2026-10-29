@@ -92,7 +92,7 @@ def cheat_sheet_links(current_page=None):
 
 def page_template(title, body, is_cheat_sheet=False, current_page=None):
     if is_cheat_sheet:
-        css_href = f"assets/{CSS_FILE}"
+        css_href = f"../assets/{CSS_FILE}"
         links = cheat_sheet_links(current_page)
     else:
         css_href = f"../assets/{CSS_FILE}"

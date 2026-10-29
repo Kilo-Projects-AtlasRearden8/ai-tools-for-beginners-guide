@@ -69,4 +69,4 @@ Common uses:
 - Copy a paragraph from this manual into NaturalReader or ElevenLabs Reader and listen to it.
 
 ---
-© 2026 Asdale Dynamics, LLC. Printable cheat sheet: docs/cheat-sheets/audio-tools.md
+© 2026 Asdale Dynamics, LLC. Printable cheat sheet: site/cheat-sheets/audio-tools.html

@@ -55,4 +55,4 @@ Copy and paste one of these into a chatbot:
 - "Plan a free Saturday in [your city] for someone who likes walking and old bookstores."
 
 ---
-© 2026 Asdale Dynamics, LLC. Printable cheat sheet: docs/cheat-sheets/chatbots.md
+© 2026 Asdale Dynamics, LLC. Printable cheat sheet: site/cheat-sheets/chatbots.html

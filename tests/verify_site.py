@@ -2,6 +2,7 @@
 """Verify the static site builds correctly from Markdown sources."""
 
 import os
+import subprocess
 import sys
 import unittest
 
@@ -43,6 +44,16 @@ class SiteBuildTests(unittest.TestCase):
             path = os.path.join(DOCS_DIR, name)
             self.assertTrue(os.path.isfile(path), f"Missing cheat sheet: {name}")
 
+    def test_build_script_runs(self):
+        """The build script must run without errors."""
+        result = subprocess.run(
+            [sys.executable, os.path.join(PROJECT_ROOT, "build_site.py")],
+            capture_output=True,
+            text=True,
+        )
+        self.assertEqual(result.returncode, 0,
+                         f"build_site.py failed: {result.stderr}")
+
     def test_html_pages_exist(self):
         """All expected HTML output pages must exist after build."""
         expected_pages = [
@@ -76,19 +87,39 @@ class SiteBuildTests(unittest.TestCase):
         path = os.path.join(ASSETS_DIR, "style.css")
         self.assertTrue(os.path.isfile(path), "Missing style.css in site/assets/")
 
+    def test_css_paths_correct(self):
+        """Every HTML page must reference the stylesheet at ../assets/style.css."""
+        for root, _, files in os.walk(SITE_DIR):
+            for name in files:
+                if not name.endswith(".html"):
+                    continue
+                path = os.path.join(root, name)
+                with open(path, "r", encoding="utf-8") as f:
+                    content = f.read()
+                self.assertIn('href="../assets/style.css"', content,
+                              f"{name} does not reference ../assets/style.css")
+
     def test_html_has_valid_structure(self):
         """Each HTML page must have basic valid structure."""
-        for name in ["index.html", "chatbots.html", "safety-privacy.html"]:
-            path = os.path.join(SITE_DIR, name)
-            with open(path, "r", encoding="utf-8") as f:
-                content = f.read()
-            self.assertIn("<!DOCTYPE html>", content)
-            self.assertIn("<html", content)
-            self.assertIn("</html>", content)
-            self.assertIn('<head>', content)
-            self.assertIn('<body>', content)
-            self.assertIn("style.css", content)
-            self.assertIn("Asdale Dynamics, LLC", content)
+        for root, _, files in os.walk(SITE_DIR):
+            for name in files:
+                if not name.endswith(".html"):
+                    continue
+                path = os.path.join(root, name)
+                with open(path, "r", encoding="utf-8") as f:
+                    content = f.read()
+                self.assertIn("<!DOCTYPE html>", content,
+                              f"{name} missing DOCTYPE")
+                self.assertIn("<html", content,
+                              f"{name} missing <html>")
+                self.assertIn("</html>", content,
+                              f"{name} missing </html>")
+                self.assertIn("<head>", content,
+                              f"{name} missing <head>")
+                self.assertIn("<body>", content,
+                              f"{name} missing <body>")
+                self.assertIn("style.css", content,
+                              f"{name} missing stylesheet reference")
 
     def test_credit_present(self):
         """Asdale Dynamics, LLC must be credited on every page."""
@@ -113,6 +144,18 @@ class SiteBuildTests(unittest.TestCase):
                     content = f.read()
                 self.assertIn("© 2026", content,
                               f"{name} missing © 2026 copyright")
+
+    def test_no_markdown_file_references_in_html(self):
+        """HTML pages must not reference .md source files as links."""
+        for root, _, files in os.walk(SITE_DIR):
+            for name in files:
+                if not name.endswith(".html"):
+                    continue
+                path = os.path.join(root, name)
+                with open(path, "r", encoding="utf-8") as f:
+                    content = f.read()
+                self.assertNotIn(".md", content,
+                                 f"{name} references a .md file (should link to .html)")
 
     def test_no_secrets_or_keys(self):
         """No API keys, secrets, or personal data in site files."""

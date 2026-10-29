@@ -55,4 +55,4 @@ Copy and paste one of these into an image generator:
 - "A vintage postcard of a small town main street with a bakery and a flower shop."
 
 ---
-© 2026 Asdale Dynamics, LLC. Printable cheat sheet: docs/cheat-sheets/image-generators.md
+© 2026 Asdale Dynamics, LLC. Printable cheat sheet: site/cheat-sheets/image-generators.html

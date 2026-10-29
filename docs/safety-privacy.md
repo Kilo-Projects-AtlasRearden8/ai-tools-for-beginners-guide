@@ -41,4 +41,4 @@ When in doubt, call your nurse, doctor, or pharmacist. AI is education only — 
 This entire page fits on one sheet of paper. Open it in your browser (site/safety.html) and print it to keep near your computer.
 
 ---
-© 2026 Asdale Dynamics, LLC. Printable cheat sheet: docs/cheat-sheets/safety-privacy.md
+© 2026 Asdale Dynamics, LLC. Printable cheat sheet: site/cheat-sheets/safety-privacy.html

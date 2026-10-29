@@ -14,12 +14,12 @@ You do not need to be a programmer to use it. If you can type into a search box,
 
 | Topic | What you will learn |
 |-------|---------------------|
-| [Chatbots](chatbots.md) | AI assistants you talk to by typing |
-| [Image generators](image-generators.md) | Making pictures from words |
-| [Writing assistants](writing-assistants.md) | Getting help with emails, letters, resumes |
-| [Audio tools](audio-tools.md) | Turning text into speech, and speech into text |
-| [Setup](setup.md) | Getting started from scratch |
-| [Safety and privacy](safety-privacy.md) | Staying safe while you explore |
+| [Chatbots](chatbots.html) | AI assistants you talk to by typing |
+| [Image generators](image-generators.html) | Making pictures from words |
+| [Writing assistants](writing-assistants.html) | Getting help with emails, letters, resumes |
+| [Audio tools](audio-tools.html) | Turning text into speech, and speech into text |
+| [Setup](setup.html) | Getting started from scratch |
+| [Safety and privacy](safety-privacy.html) | Staying safe while you explore |
 
 Each page includes step-by-step instructions, realistic examples, and a printable cheat sheet.
 
@@ -32,9 +32,9 @@ Each page includes step-by-step instructions, realistic examples, and a printabl
 
 ## How to use this manual
 
-Read the [setup page](setup.md) first if you have never used an AI tool before. Then pick the topic that sounds most useful to you and follow the steps. Each page stands on its own, so you can jump around.
+Read the [setup page](setup.html) first if you have never used an AI tool before. Then pick the topic that sounds most useful to you and follow the steps. Each page stands on its own, so you can jump around.
 
-When you are ready to print a quick reference, open the matching page in `docs/cheat-sheets/` and print it from your browser.
+When you are ready to print a quick reference, open the matching page in `site/cheat-sheets/` and print it from your browser.
 
 ---
 © 2026 Asdale Dynamics, LLC. Plain-English AI education for beginners.
